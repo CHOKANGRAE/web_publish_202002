@@ -1,7 +1,28 @@
-<!D
-<html>
- <head>
- </head>
-  <body>
-  </body>
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset = "UTF-8">
+    <title> html 사용법 </title>  
+    <style>
+          h1{background-color : #8b00ff;}
+          p{color : #8b00ff; margin : 0;}
+          p .purple{font-weight : bold;}  
+    </style>
+  </head> 
+  <body> 
+     <h1> 문서 테스트 </h1>
+     <p> body 내부 스타일 설정_head에서 style 열고 닫기 </p>
+     <p> color 색깔 설정 </p>
+     <p> margin은 여백 </p>
+     <p> br / 은 단락 띄우기 </p>
+     <p class="purple"> p, /p는 단락 한번 더 띄우기 </p>
+     <p> <span class="purple"> 추가 내용 </span> </p>
+
+     <script>
+	var myH = document.getElementsByTagName('h1')[0];
+	myH.addEventListener('click', function() {
+	   myH.style.backgroundColor="#3fa";
+	});
+     </script>
+  </body> 
 </html>
