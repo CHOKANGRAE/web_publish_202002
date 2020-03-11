@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- a_basic_api.html --> 
+<html lang="ko-KR"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatable" content="IE=edge">
+    <title> 웹페이지 구조 이해하기1 </title>
+    <!-- css 디자인 요소 -->
+
+    <style>
+     /* a_basic_api_html 에 해당하는 css 내용 */ 
+    </style>
+  </head>
+  <body>
+    <!-- layout ======== -->
+    <div>
+      <h1> 가장 중요한 제목-하나의 페이지에서 한 번만 사용 <h1>
+      <h2> 두번째 중요한 제목 </h2>
+      <h3> 세번째 중요한 제목 </h3>
+      <h4> 네번째 중요한 제목 </h4>
+      <h5> 다섯번째 중요한 제목 </h5>
+      <h6> 제목 요소 중 가장 낮은 레벨 </h6>
+    </div>
+      <hr /> <!-- 이전 내용과 다음 내용 구분(markdown ---와 같은 화제의 전환) -->
+      <div>
+      <p> 내용을 나타내는 요소, 줄 바꿈 띄어쓰기 여러개 할 수 없음
+          만약 줄바꿈하려면 <br /> 사용 </p>
+      <pre>내용을 나타내는 또 다른 요소
+           줄바꿈 처리가 가능,   띄어쓰기 마음대로 처리 가능
+           실제로 불편함 많은 기능이기에 실제는 코드용으로만 사용
+           &lt; h1 &gt; 제목이 보이게  &lt; &sol; h1 &gt;
+           &copy; 강래 &#8361; &amp;
+           <!-- entity code -->
+      </pre>
+     </div>
+
+      <blockquote> 
+        <p> 니체는 말했다. <q> 신은 죽었다! </q> 라고 </p>
+        <p><q> 신은 죽었다. </q></p>
+        <p><q> 악법도 법이다. </q></p>
+      </blockquote>
+      <!-- 인용문 -->
+
+      <p> <abbr title="hiper text markup language"> HTML </abbr> 
+          의 기능은 구조를 나타내는 것이고, <br/>
+          <abbr title="cascading style sheets"> CSS </abbr>
+          의 기능은 디자인을 처리하며, <br />
+          <abbr title="javascript"> JS </abbr>
+          의 기능은 제어를 하는 것이다. </p>
+      <!-- 약어 -->
+      <ht />
+      <div>
+      <p> 강조를 나타내는 요소에는 <br />
+          <strong> 매우 중요하며, 위험한 의미 </strong>의 방법과, <br />
+          <em> 권장정도의 중요함 </em> 을 표시하는 방법과, <br />
+          해당내용을 해결하여 <del> 의미없음 </del>을 표시하는 방법과, <br />
+          <ins> 인식의 방향 </ins>을 잡아주는 용도의 방법 <br />
+      </p>
+
+      <p>
+        강조의 모양과 동일하지만, 기능이 다른 요소 <br />
+        <b> 굵은 글씨를 표시하는 </b> <br />
+        <i> 기울임을 표시하는 </i> <br />
+        <s> 취소선을 삽입하는 </s>, 또 다른 <strike> 취소선 </strike> <br />
+        <u> 밑줄을 표시하는 </u> 형태가 있지만 <br />
+        s와 strike는 HTML5버전에는 완전히 삭제된 기능이고 <br />
+        이외의 b, i, u의 형태는 감정의 형태를 취하는 정도 <br />
+        b, u는 <span> 거의 안 씀 // i는 아이태그 용도로 사용</span>  
+      </p>
+      </div>
+      <hr />
+
+      <div>
+      <!-- 목록 -->
+      <ul>
+        <!--unorder list (기호) -->
+        <li> 목록1 </li>
+        <li> 목록2 </li>
+      </ul>
+
+      <ol>
+        <!-- order list (숫자) -->
+        <li> 목록1 </li>
+        <li> 목록2 </li>
+      </ol>
+
+      <dl>
+        <!-- data list -->
+        <dt> 리스트의 제목 </dt>
+        <dd> 리스트의 내용을 담아서 처리 </dd>
+        <dd> 리스트의 내용을 담아서 처리 </dd>
+      </dl>
+      </div>
+
+      <div>
+      <!-- 중첩*(다단)리스트, li안에 담아야 함, ul, ol의 자식 li-->
+      <ul>
+        <li> 목록 </li>
+        <li> 목록1
+          <ul>
+            <li> 목록1-1 </li>
+            <li> 목록1-2 </li>
+          </ul>
+        </li>
+        <li> 목록2
+          <ul>
+            <li> 목록2-1 </li>
+            <li> 목록2-2 
+            <dl>
+              <dt> 목록2에 대한 중간 제목 </dt>
+              <dd> 목록2-2-2에 대한 설명 </dd>
+            </dl>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+
+      <hr />
+      <!-- img(파일과 이미지는 항상 같은 위치에) -->
+      <div>
+      <img src="./pengsu.jpg" alt="이미지에 대한 정확하고 의미있는 설명" />
+      </div>
+
+      <div>
+      <a href="https://naver.com" target="_blank"> 네이버로 이동하기 </a>
+      </div>
+      
+    <!-- script ======== -->
+    <script>  </script> 
+  </body>
+</html>
