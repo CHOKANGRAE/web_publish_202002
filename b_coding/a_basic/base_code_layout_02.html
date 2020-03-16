@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- base_code_layout_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--[if IE]>
+    <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif]-->
+  <title> layout_02 </title>
+  <!-- css -->
+  <style>
+    /* reset.css */
+    html, body {width:100%; height:100%;}
+    html,body,
+    h1,h2,h3,h4,h5,h6,
+    p,pre,div,img,ul,ol,li,dl,dt,dd {margin:0; padding:0;}
+    ul,ol,li {list-style:none;}
+
+    header,article,section,aside,nav,footer,main,figure {display:block;}
+
+    /* design */
+    #wrap{margin:200px auto; width:960px; height:1200px; background-color: #3CF;}
+
+    #headBox{width:100%; height:120px; background-color:#f4f; box-sizing:border-box;}
+      #headBox > h1{float:left; margin:10px; width:150px; height:100px; background-color: #fff;}
+      #unbBox{float:right; margin:10px; margin-left:60px; width:220px; height:40px; background-color: #fff;}
+      #gnbBox{float:right; margin-right:10px; width:500px; height:50px; background-color: #fff;}
+
+    #viewBox{width:100%; height:450px; background-color: #f80;}
+
+    #contentBox{width:100%; height:500px; background-color: #2AE;}
+      .list{float:left; width:200px; height:500px; background-color: #25E;}
+        .a_child {width:180px; height:100px; background-color: #d5e;}
+        .li_01 {margin:20px 10px;}
+        .li_02 {margin:10px;}
+        .li_03 {margin:20px 10px;}
+        .li_04 {margin:10px;}
+
+      .lnb_list{float:right; width:760px; height:200px;background-color: #2C0;}
+
+      .lnb_content{float:right; width:760px; height:300px; background-color: #243;}
+        .content_1{float:left;width:380px; height:300px; background-color: #C83;}
+        .content_2{float:right; width:380px; height:300px; background-color: #C43;}
+
+    #footBox{width:100%; height:130px; background-color:#777;}
+  </style>
+</head>
+
+<body>
+  <!-- layout -->
+  <div id="wrap">
+
+    <header id="headBox"> 
+      <h1> </h1>
+      <nav id="unbBox">  </nav>
+      <nav id="gnbBox"> </nav>
+    </header>
+
+    <section id="viewBox"> </section>
+
+    <main id="contentBox">
+      <ul class="list"> 
+        <li class="li_01 a_child"> </li>
+        <li class="li_02 a_child"> </li>
+        <li class="li_03 a_child"> </li>
+        <li class="li_04 a_child"> </li>
+      </ul>
+      <section class="lnb_list"> </section>
+      <section class="lnb_content"> 
+       <aside class="content_1"> </aside>
+       <article class="content_2"> </article>
+      </section>
+    </main>
+
+    <footer id="footBox"> </footer>
+  </div>
+  <script></script>
+</body>
+</html>

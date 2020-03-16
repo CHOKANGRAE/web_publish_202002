@@ -1,0 +1,46 @@
+/* jisan_result.css */
+
+@charset "utf-8";
+
+/* reset.css */
+    html, body{width:100%; height:100%;}
+    html, body, h1, h2, h3, h4, h5, h6, p, div, pre,
+    ul, ol, li, dl, dt, dd{margin:0; padding:0; border:0; outline:0;}
+    ul, ol, li{list-style: none;}
+
+
+/* design */
+    
+    #wrap {width:100%; height:auto; min-height:800px; background-color: #ccc;}
+
+    /* #popupBox ============ */
+    #popupBox{width:100%; height:90px; background-color: #777;}
+
+    /* #headBox ============ */
+    #headBox{width:100%; height:86px; background-color: #333;}
+
+    /* #navBox ============ */
+    #navBox{display : none;}
+
+    /* #viewBox ============ */
+    #viewBox{width:100%; height:714px; background-color: #555;}
+
+    /* #seasonBox ============ */
+    #seasonBox{width:100%; height:900px; background-color: #aaa;}
+
+    /* #saleBox ============ */
+    #saleBox{width:100%; height:900px; background-color: #999;}
+
+    /* #newsBox ============ */
+    #newsBox{width:100%; height:900px; background-color: #ddd;}
+
+    /* #sideBox ============ */
+    #sideBox{display:none;}
+
+    /* #footBox ============ */
+    #footBox{width:100%; height:230px; background-color: #131313;}
+
+    /* position, 접근성 4원칙 13지침, 
+       수요일 선답형 문제 : 15문제
+       포트폴리오문제 : 홈페이지 레이아웃(NEW + gitmind(5페이지 새롭게)) 
+       스케치, 프로토타입(jpg파일 / 일러스트 & invision 가능), gitmind */
