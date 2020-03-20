@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* skt_web.css */
+
+/* reset.css */
+  html, body{width:100%; height:100%;}
+  html, body, h1, h2, h3, h4, h5, h6, p, div, pre,
+  ul, ol, li, dl, dt, dd{margin:0; padding:0; border:0; outline:0;
+  behaivor:url('../../ie/pie/PIE.htc');}
+
+  ul, ol, li{list-style: none;}
+
+  a {color:inherit; text-decoration:none;}
+  a:hover {color:#999;  text-decoration:underline;}
+  a:active {color:#fac;}
+
+  .hidden{display:block; position:absolute; z-index:-1;
+          width: 0; height: 0; overflow: hidden;}
+
+
+/* design.css */
+  #wrap{width:1900px; height:auto; background-color: #fff;}
+
+/* headBox ============================================================ */
+  #headBox{padding:10px 334px;
+           width:100%; height:106px; 
+           box-sizing: border-box; background-color: #aaa;}
+  h1{float:left; width:116px; height:80px; background-color:#333; font-size: 14px;}
+
+/* naviBox ============================================================ */
+  #naviBox{float:right; width:1100px; height:auto;}
+    .gnb{float:left; width:938px; height:54px; background-color: #383838; font-size:14px;}
+    .unb{float:right; width:150px; height:54px; background-color: #383838; font-size:14px;}
+
+    .header_navi > ul {width:100%; height:40px; text-align:center; line-height:40px;}
+
+    .header_navi > ul > li {float:left; width:auto; height:100%; background-color: #fff;}
+    .header_navi > ul > li:last-child {margin-right:0;}
+    .header_navi > ul > li a {display:block; width:auto; height:100%;}
+
+    .gnb >ul>li {margin-right:15px;}
+    .gnb >ul>li>a {padding:0 20px;}
+
+    .unb >ul>li{margin-right:6px;}
+    .unb a > i{display:inline-block; width:30px; height:30px; margin-right:5px; background-color:#777;}
+
+
+/* viewBox ============================================================ */
+  #viewBox{width:100%; height:710px; background-color: #ddd;}
+    .view{float:left; margin:30px 334px; width:1252px; height:650px; background-color: #666;}
+
+/* guideBox =========================================================== */
+  #guideBox{width:100%; height:1604px; background-color: #aaa;}
+    .guide{float:left; margin:62px 334px; width:1252px; height:1484px; background-color: #fff;}
+      .title_Box{width:390px; height: 282px; background-color: #ccc;}
+      .Box_{float:left; margin-top:36px; margin-right:41px; width:390px; height:1166px; background-color: #2d2d2d;}
+      .Box_:last-child{margin-right: 0px;}
+        .company_info{width:390px; height:574px; background-color: #ccc;}
+        .news_info{margin-top:18px; width:390px; height:574px; background-color: #ccc;}
+
+        .business_info{width:390px; height: 574px; background-color: #ccc;}
+        .people_info{margin-top:18px; width:390px; height: 574px; background-color: #ccc;}
+
+        .social_value{width:390px; height: 574px; background-color: #ccc;}
+        .other_info{margin-top:18px; width:390px; height: 574px; background-color: #ccc;} 
+
+/* newsBox ============================================================ */
+  #newsBox{width:100%; height:790px; background-color: #bbb;}
+    h2{float:left; margin-top:20px; margin-left:334px; width:1252px; height:108px; background-color: #666;}
+    .newsBox_sub{float:left; margin-top:18px; margin-left:334px; width:1252px; height:402px; background-color:#666;}
+      .news_area{float:left; margin-right:41px; width:390px; height:402px; background-color: #2d2d2d;}
+      .news_area:last-child{margin-right:0px;}
+    .snsBox{float:left; margin-top:76px; margin-left:334px; width:1252px; height:108px; background-color:#666;}
+      h3{float:left; margin:12px 0px 12px 178px; width:442px; height: 52px; background-color:#2d2d2d;}
+      .sns_area{float:right; margin:10px 18px; width:567px; height: 88px; background-color:#2d2d2d;}
+
+/* familyBox ========================================================== */
+  #familyBox{width:100%; height:320px; background-color: #aaa;}
+    .family{float:left; margin:52px 334px; width:1252px; height:216px; background-color:#666;}
+    .family_box{float:left; margin:15px 26.6px; width:364px; height:186px; background-color:#444;}
+
+/* footBox ============================================================ */ 
+  #footBox{width:100%; height:270px; background-color: #000;}
+    .foot_01{width:100%; height:56px; background-color: #222;}1200 118
+    .foot_02{padding:48px 360px; width:100%; height:214px; background-color: #bbb;}
+      .foot_area1{float:left; margin:32px 0px 0px 362px; width:176px; height:56px; background-color: #666;}
+      .foot_area2{float:left; margin:32px 0px 0px 32px; width:730px; height:56px; background-color: #666;}
+      .foot_area3{float:right; margin:100px 340px 0px 0px; width:250px; height:56px; background-color: #666;}
+      .foot_area4{float:left; margin:12px 0px 0px 570px; width:730px; height:56px; background-color: #666;}
