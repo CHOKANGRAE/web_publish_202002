@@ -1,0 +1,141 @@
+$(window).on("load",function(){
+
+
+});
+
+$(document).ready(function(){
+	
+	$("#Txt_Tword").keydown(function(key) {
+		if (key.keyCode == 13) {
+			if ($.TValidChk()==false) return false;
+			$("#frmT").attr("action", "/sub/list.asp");
+			$("#frmT").attr("method", "post");
+			$("#frmT").submit();
+		}
+	});
+	$("#btn_Search").on("click",function(){
+		if ($.TValidChk()==false) return false;
+		$("#frmT").attr("action", "/sub/list.asp");
+		$("#frmT").attr("method", "post");
+		$("#frmT").submit();
+	});
+	$.TValidChk = function(){
+		obj = $("#Txt_Tword");
+		if(obj.val().trim()==""){  
+			alert("검색어를 입력하여 주시기 바랍니다.");
+			obj.focus();
+			return false;	
+		}
+		return true;	
+	}
+
+	$(".family-site .combo-box").click(function(){
+		$(this).toggleClass("on");
+
+		if($(this).hasClass("on")){
+			$(".family-site ul").slideDown();
+		}else{
+			$(".family-site ul").slideUp();
+		}
+	});
+	
+	$(".scrap-pop .title .close").on("click", function(){
+		$(".scrap-pop").css({"display" : "none"});
+	});
+	
+	
+	$(window).resize(function(){
+		if($(".scrap-pop").is(":visible")){
+			scrap_pop();
+		}
+		
+	});
+	
+	$("#selyear").change(function(){
+		if ($(this).val()!="") {
+			window.open($(this).val());
+		}
+	});
+});
+
+function scrap_pop(){
+
+	var win_w = $(window).width();	
+	var win_h = $(window).height();
+	if(win_w < 1024){ 
+		win_w = 1024;
+		win_h = ($(window).height() * 1024) / $(window).width();
+	}
+
+	var left = (win_w - $(".scrap-pop").outerWidth()) / 2 + $(window).scrollLeft();
+	var top = (win_h - $(".scrap-pop").outerHeight()) / 2 + $(window).scrollTop();
+
+	$(".scrap-pop").css({"left" : left+"px", "top" : top+"px", "display" : "block"});
+
+}
+function nearo(){
+	alert("서비스 준비중입니다.");
+	return;
+	//window.open(nearo_url,'naverloginpop', 'titlebar=1, resizable=1, scrollbars=yes, width=600, height=550');
+	//$("#login_Type").val(type); 
+	naver_id_login.init_naver_id_login()
+}
+
+Kakao.init('1b381df35c0b60b819ab0d3d0f43468b');
+function kaaro() {
+
+	// 로그인 창을 띄웁니다.
+	Kakao.Auth.login({
+	success: function(authObj) {
+
+		$("#access_token").val(authObj.access_token);
+
+	  // 로그인 성공시, API를 호출합니다.
+		  Kakao.API.request({
+			 url: '/v2/user/me',
+			 success: function(res) {
+			 	//alert(JSON.stringify(res));
+			 	//alert(res.kakao_account.email);
+			 	//alert(res.id);
+			 	//alert(res.kaccount_email);  
+				//$("#name").val(res.properties.nickname);
+				//$("#email").val(res.kakao_account.email);
+				//$("#type").val("K"); 
+				//document.frm.submit();
+				
+				//alert(res.kakao_account.email);
+				
+			   	$("#oauth_id").val(res.id);
+				$("#oauth_name").val(res.properties.nickname);
+				$("#oauth_email").val("");
+				$("#int_intype").val("2"); 
+				//opener.document.frmLog.action = "/member/comm_sns_proc.asp";
+				
+				
+				
+				document.frmLog.submit();	
+				
+			 },
+			 fail: function(error) {
+				alert("+"+JSON.stringify(error));
+			 }
+		  });
+
+		  function logout(){
+			  Kakao.API.request({
+				 url: '/v1/user/unlink',
+				 success: function(res) {
+					//alert(JSON.stringify(res));
+					console.log(res);
+				 },
+				 fail: function(error) {
+					alert("-"+JSON.stringify(error));
+				 }
+			  });
+		  }
+	},
+	fail: function(err) {
+	  alert(JSON.stringify(err));
+	}
+	});
+};

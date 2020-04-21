@@ -1,0 +1,208 @@
+/* a_basic_background.css */
+
+/*
+  *background-color : 배경색
+  *background-image : <img> 와 비슷한 개념이지만 img의 경우는 글자처럼 html 요소 내부에 담아서 사용하는 기능
+                      background-image는 배경에 색상대신 이미지로 대체하는 기능
+                      img는 새로고침의 경우 매번 새로 불러오는 형식
+                      bgi는 임시로 저장해서 새로고침해도 추가 데이터를 소모하지 않는다.
+                      여러개의 이미지를 하나의 이미지로 저장하여 브라우저의 속도를 올릴 수 있는 기능 (js기법)
+                      img는 자주 변경하는 기능, bgi는 디자이너들이 주로 샤용, 한번 세팅하면 크게 변하지 않는 영역
+  *background-repeat:no-repeat | repeat | repeat-x | repeat-y ;
+  *background-position:;
+  *background-size:;
+  *background-clip:;
+
+  IR기법, IS 기법의 내용을 찾아서 정리
+*/
+
+/* ======================= 기 본 설 정 =============================== */
+
+h1 {text-align: center;}
+
+.bg_wrap {width:800px; height:auto; 
+          margin:auto; padding:0.5rem; background-color: #eee;}
+
+.part {width:100%; height:500px; 
+       border:1px solid #777; margin-bottom: 1rem;}
+
+h2 {width:100%; height:30px; 
+    background-color: #acf; font-size:1.5rem; display:none;}
+
+
+/* ======================= 부 가 설 정 =============================== */
+
+/* ============= background-image ====================== */
+.part_01 {background-image:url('../../img/user.png'); 
+          background-repeat:repeat-x; 
+          background-position: 0 0;
+          }
+
+/* ============= background-repeat ====================== */
+.part_02 {background-image:url('../../img/user.png');   /* background-position : 0 0(기본) | 50% 50%(가운데) | center top(가운데 위) ; */
+          background-repeat: no-repeat;
+          background-position:100% 30%;    
+          /* background-position-y:50; */
+          }
+
+
+
+/* IR(Image-replace) : 내용을 text대신 이미지로 대체하여 보이게 하는 작업
+
+
+   IS(Image-sprite) : 여러개의 이미지를 하나의 파일에 담아서 처리하는 기법 */
+
+/* ============= background-position ====================== */
+.part_03 > ul {width:100%; height:auto;}
+.part_03 > ul:after, .part_03 > ul::after{content=""; display: block; clear:both;}
+.part_03 li {float:left; width:60px; height:60px; 
+             margin:0.5rem; border:1px solid #777;}
+
+
+.part_03 a {display: block; width:100%; height:100%; background-color:#fcf;
+            background-image:url(../../img/sprites_icon.jpg);
+            background-repeat: no-repeat;}
+
+.part_03 a > span {display: block; width:0; height:0; position: absolute; z-index: -1; overflow: hidden;}
+
+.part_03 li:nth-child(1)>a{background-position: -30px -20px;}
+
+.part_03 li:nth-child(2)>a{background-position: -412px -116px;}
+
+.part_03 li:nth-child(3)>a{background-position: -30px -504px; background-position: -1.875rem -31.54rem;}
+.part_03 li:nth-child(3)>a:hover{background-position: -126px -504px; background-position: -7.875rem -31.54rem;}
+.part_03 li:nth-child(3)>a:active{background-position: -222px -504px; background-position: -13.875rem -31.54rem;}
+.part_03 li:nth-child(3)>a:focus{background-position: -318px -504px; background-position: -19.875rem -31.54rem;}
+
+.part_03 li:nth-child(4)>a{background-position: -606px -120px;}
+.part_03 li:nth-child(4)>a:hover{background-position: -702px -120px;}
+
+/* div{}
+
+    * 마우스 올릴때             →  div:hover{}
+    * 마우스 누르고 있을때       →  div:active{}
+    * 초점이 잡혔을때            →  div:focus{}
+    * 체크 되었을때             →  div:checked{}
+    * 내용상의 가상선택자(이전)  →  div:before{}
+    * 내용상의 가상선택자(이후)  →  div:after{}
+
+    * 방문한적이 있을때         →  div:visited{]
+    * link 기능일때             →  div:linked{}
+*/
+
+.part_04 > ul {width:100%; height:auto;}
+.part_04 > ul:after, .part_03 > ul::after{content=""; display: block; clear:both;}
+.part_04 li {float:left; width:30px; height:30px; 
+             margin:0.5rem; border:1px solid #777;}
+
+
+.part_04 a {display: block; width:100%; height:100%; background-color:#fcf;
+            background-image:url(../../img/sprites_icon_02.jpg);
+            background-repeat: no-repeat;}
+
+.part_04 a > span {display: block; width:0; height:0; position: absolute; z-index: -1; overflow: hidden;}
+
+.part_04 li:nth-child(1)>a{background-position: -8px -43px;}
+.part_04 li:nth-child(1)>a:hover{background-position: -49px -43px;}
+.part_04 li:nth-child(1)>a:focus{background-position: -87px -43px;}
+
+.part_04 li:nth-child(2)>a{background-position: -250px -164px;}
+.part_04 li:nth-child(2)>a:hover{background-position: -89px -164px;}
+.part_04 li:nth-child(2)>a:focus{background-position: -291px -164px;}
+.part_04 li:nth-child(2)>a:active{background-position: -49px -164px;}
+
+.part_04 li:nth-child(3)>a{background-position: -87px -282px;}
+.part_04 li:nth-child(3)>a:hover{background-position: -128px -321px;}
+.part_04 li:nth-child(3)>a:focus{background-position: -371px -479px;}
+.part_04 li:nth-child(3)>a:active{background-position: -170px -321px;}
+
+
+/* ============= background-size ====================== */
+
+.part_05 {height:auto;}
+.bg_box_01 {width:400px; height: 100px;
+            background-image: url(../../img/bgi/bgi_1.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+            background-size: 100% auto;
+            }
+
+.bg_box_02 {width:200px; height: 200px;
+            background-image: url(../../img/bgi/bgi_2.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: auto 150%;
+            background-color: #fff;
+            }
+
+.bg_box_03 {width:300px; height: 600px;
+            background-image: url(../../img/bgi/bgi_3.jpg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            background-color: #acf;
+            }
+
+.bg_box_03:hover {background-size: contain;}
+
+.bg_box_04 {width:100%; height: 200px;
+            background-image: url(../../img/bgi/bgi_4.jpg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 100% auto;
+            transition: all 300ms ease;
+            }
+
+.bg_box_04:hover {background-position: 50% 100%;
+                  background-size: 120% auto;} 
+
+/* cover   : 빈 공간 없이 꽉차게 처리하는 것
+   contain : 내용 이미지를 모두 보게 만드는 것 */
+
+/* ============= background-clip ====================== */
+.part_06>div{float:left; width:150px; height:150px; 
+             margin:1rem; padding:10px; border:10px dotted #f07;
+             background-color: #ccf;
+             background-image: url(../../img/bgi/bgi_1.jpg); 
+             background-repeat: no-repeat;
+             background-position: 50% 50%;
+             background-size: 150% auto;
+             font-weight: bold;
+             }
+
+.clip_01 {background-clip: border-box;}
+.clip_02 {background-clip: padding-box;}
+.clip_03 {background-clip: content-box;}
+.clip_04 {-webkit-background-clip: text; color:transparent;}
+
+/* 배경이미지의 영역을 어디까지 포함할 것인가?
+   아무것도 없는 형태
+   border-box // 외곽선의 영역까지 이미지를 담을 수 있게 처리
+   padding-box // 패딩 영역까지 이미지를 처리(border는 제외)
+   content-box // 내용만을 처리(border, padding 제외)
+   text // 글씨의 영역만큼 이미지로 마스크 처리(글씨 색은 투명이어야 하며, ie는 지원X) */
+
+/* ============= background-clip ====================== */
+.part_07{height:auto;}
+
+.part_07>div {width:100%; height:600px; border-bottom: 1px solid #333;
+              background-repeat: no-repeat; background-position: 50% 0;}
+
+
+.attach_01{background-image: url(../../img/bgi/bgi_1.jpg);
+           background-attachment: scroll; 
+           }
+
+.part_07 > .attach_02{background-image: url(../../img/user.png), url(../../img/bgi/bgi_2.jpg);
+                      background-size:100px auto, cover;
+                      background-position: 50% 50%, 50% 100%;
+                      background-attachment: scroll, fixed; 
+                      }
+
+.attach_03{background-image: url(../../img/bgi/bgi_3.jpg);
+           background-attachment: scroll; 
+           }
+
+.attach_04{background-image: url(../../img/bgi/bgi_4.jpg);
+           background-attachment: fixed; 
+           }
