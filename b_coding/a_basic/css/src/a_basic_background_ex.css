@@ -1,0 +1,87 @@
+/* a_basic_background.css */
+
+.wrap {width:980px; height:850px; margin:auto; margin-top:20px; font-family: Myriad Pro;}
+
+/* guideBox =================================================== */
+#guideBox {width:100%; height:30px; background-color: #888;}
+  .guide_area {float:right; color:#fff; font-size:15pt; line-height: 35px; }
+    .guide_home {float:left; width:87px; height:30px;
+                 background-color: #888; text-align: center;}
+    .guide_home:hover{font-weight: bold;}
+
+    .guide_study {float:left; width:97px; height:30px; 
+                  background-color: #555; text-align: center;}
+    .guide_study:hover{font-weight: bold;}
+
+    .guide_education {float:left; width:245px; height:30px; 
+                      background-color: #fff30d; color:#555;
+                      padding-left:15px;}
+    .guide_education:hover{font-weight: bold;}
+
+    .gd_edu_right {float:right; margin-right:22px; margin-top:10px;
+                   width:60px; height:12px; background-image:url(../../img/gcass/arrow.png); }
+
+/* headBox =================================================== */
+#headBox {float:left; width:250px; height:710px; background-color: #777;}
+  h1 {margin:50px 48px 43px 48px; width:153px; height:103px; 
+      background-image: url(../../img/gcass/h1_logo.png);}
+
+  #gnb {margin:auto; margin-top:0; width:153px; height:290px;}
+  #gnb > ul {color:#fff; font-size:20pt;}
+  #gnb li {margin-bottom:24px; height:41px; border-bottom:5px solid #fff;}
+  #gnb li:last-child{margin-bottom: 0;}
+  #gnb li>a>span:hover {color:#fff30d; font-weight: bold;}
+
+  .right_icon_1 {float:right; margin:5px 5px; width:10px; height:11px; background-image: url(../../img/gcass/right.png);}
+
+  .qnabox {margin:auto; margin-top:50px; width:106px; height:111px; 
+           background-image:url(../../img/gcass/qna.png);}
+  .qnabox:hover {background-image:url(../../img/gcass/qna_hover.png);}
+
+
+/* viewBox =================================================== */
+#viewBox {float:right; width:730px; height:710px; background-color: #adadad;}
+  .pattern{width:100%; height:30px; background-image:url(../../img/gcass/pattern_bg.png);}
+  .view_computer {float:left; position: absolute; z-index: 100px;
+                  margin-top:122px; margin-left: 80px;
+                  width:324px; height:520px; background-image:url(../../img/gcass/computer.png);}
+
+  .view_area {float:right; width:500px; height:800px;
+              padding-top:5px; 
+              background-image:url(../../img/gcass/bg_text.png);
+              line-height: 120px; text-align: right; letter-spacing:-15px;
+              font-size:140px; 
+              -webkit-background-clip: text; color:transparent;}
+
+
+/* footBox =================================================== */
+#footBox {float:left; width:100%; height:110px; background-color: #eee;}
+  h2 {float:left; margin:17px 14px 17px 48px;width:80px; height:54px; 
+      background-image: url(../../img/gcass/h2_logo.png);}
+
+  .snsbox{float:left; width:90px; height:52px; margin-top:27px;}
+    .location{float:left; width:29px; height:40px; margin-left:5px; 
+              background-image: url(../../img/gcass/location.png); }
+    .location:hover{background-image: url(../../img/gcass/location_hover.png); }
+    .facebook{float:right; width:38px; height:38px; margin-right:5px;
+              background-image: url(../../img/gcass/facebook.png); }
+    .facebook:hover{background-image: url(../../img/gcass/facebook_hover.png); }
+
+  .company_info{float:left; margin:17px 16px; font-size:14px; color:#555;}
+
+  .address_box{float:right; bottom:50px; right:42px; position: relative; z-index: 1000;
+               width:301px; height:100px; background-color: #ccc;}
+    .address_box > ul {width:301px; height:100px;}
+    .address_box li {width:301px; height:50px;}
+    .address_box dt {float:left; width:95px; height:50px; background-color: #555; 
+                     font-size:12pt; color:#fff; line-height: 50px;
+                     padding-left:5px; box-sizing: border-box; border-right:1px solid #fff;}
+    .address_box dd {float:right; width:206px; height:50px; background-color: #baa50c;
+                     font-size:14pt; color:#333; line-height: 50px;
+                     padding-left:10px; box-sizing: border-box;}
+    .address_box dd:last-child {float:right; width:206px; height:50px; background-color: #fff30d;
+                                border-top:1px solid #fff;}
+
+  #footBox > p {float:right; width:301px; height:18px; display: block;
+                margin-right: -270px; margin-top:55px; font-size:14px; color:#555;}
+  .right_icon_2 {float:right; margin:17px 5px; width:10px; height:11px; background-image: url(../../img/gcass/right.png);}
