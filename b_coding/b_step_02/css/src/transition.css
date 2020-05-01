@@ -1,0 +1,259 @@
+/* transition.css */
+
+/** transition : 애니메이션 기법
+    (단회성) // 특정한 조건이 주어졌을때 한번에 한하여 애니메이션이 처리되는 기법
+    
+   * transition-[기능] : ... ;
+      1. property // 속성명 (all, css속성명)
+      2. duration // 지속시간 (1s, 0.5s = 1000ms, 500ms)
+      3. timing-function // 흐름의 방식(속도처리방식) (ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier() ) 
+      4. delay // 지연시간(1s, 0.5s = 1000ms, 500ms)
+*/
+
+h1 {width:500px; margin:10px auto;text-align: center; 
+  background-color: #ADC7E4; color:#fff;}
+
+h2 {
+  width:100%; height:50px;
+  background-color: #06f;
+  color:#fff;
+  text-align: center;
+}
+
+.sample {
+  width:800px; height: auto;
+  margin:auto; border:1px solid #333;
+}
+
+.sample ul {
+  width:100%; height: auto;
+}
+
+.sample li {
+  width:100px; height:100px;
+  background-color: #acf;
+  border: 2px solid #035;
+  border-radius: 0.5rem;
+  margin: 1rem; 
+}
+
+.sample li:nth-child(1):hover{
+  width:500px; height: 300px;
+  background-color: #aca;
+  transition-property: all;
+  transition-duration: 1000ms;
+}
+
+/*=====================================*/
+
+.sample li:nth-child(2){
+  transition-property: background-color;
+  transition-duration: 2000ms;
+}
+
+.sample li:nth-child(2):hover{
+  background-color: #678;
+  /* transition-property: background-color; */
+  /* transition-duration: 1000ms; */
+}
+
+.sample li:nth-child(2):active{
+  background-color: #aaf;
+  /* transition-property: background-color; */
+  /* transition-duration: 500ms; */
+}
+
+/*=====================================*/
+
+.sample li:nth-child(3)>span{
+  display: block; width:100%; height: 100%;
+  background-color: #07f;
+  transition-duration:500ms;
+}
+
+.sample li:nth-child(3)>span:hover{
+  transform:translateX(250px) scale(1.4);
+}
+
+/*=====================================*/
+
+.sample li:nth-child(4){
+  transition-property: all;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1000ms; /* 잘 안 씀 */
+
+  /*  ease : 속도 빨라졌다가 느려짐(자연적)
+      ease-in : 속도 점점 빠르게
+      ease-out : 속도 점점 느리게
+      ease-in-out : 속도 빨라졌다가 느려짐(인위적)
+      linear : 같은속도 유지
+      cubic-bezier() */
+}
+
+.sample li:nth-child(4):hover{
+  background-color: #555;
+  color:#fff;
+  width:700px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.sample2{
+  width:800px;
+  margin:auto;
+  height: 600px;
+  border:1px solid #777;
+}
+
+.sample2 > h2 {
+  text-align: center;
+  width:100%; height:50px;
+  background-color: #06f;
+  color:#fff;
+}
+
+.sample2 > ul {
+  width:100%; height:auto;
+  margin-top:1rem;
+  background-color: #ddd;
+}
+
+.sample2 li {
+  width:50px; height: 50px;
+  background-color: #4f7;
+  margin-top:1rem;
+  transition-property: all;
+  transition-duration: 2000ms;
+}
+
+.sample2 li:nth-child(1){background-image: url('../../img/hospital-icon.png'); 
+                         background-size: auto 100%;
+                         background-repeat: no-repeat;;}
+.sample2 li:nth-child(2){transition-timing-function: ease;}
+.sample2 li:nth-child(3){transition-timing-function: ease-in;}
+.sample2 li:nth-child(4){transition-timing-function: ease-out;}
+.sample2 li:nth-child(5){transition-timing-function: ease-in-out;}
+.sample2 li:nth-child(6){transition-timing-function: linear;}
+.sample2 li:nth-child(7){transition-timing-function: cubic-bezier(0,1.22,1,-0.06);}
+.sample2 li:nth-child(8){transition-timing-function: cubic-bezier(0,1.22,98,-1.75);}
+
+
+.sample2:hover li:nth-child(1){width:800px; background-color: #96a;}
+.sample2:hover li:nth-child(2){width:800px; background-color: #fc6;}
+.sample2:hover li:nth-child(3){width:800px; background-color: #ca5;}
+.sample2:hover li:nth-child(4){width:800px; background-color: #a56;}
+.sample2:hover li:nth-child(5){width:800px; background-color: #2f5;}
+.sample2:hover li:nth-child(6){width:800px; background-color: #f3f;}
+.sample2:hover li:nth-child(7){width:800px; background-color: #f77;}
+.sample2:hover li:nth-child(8){width:800px; background-color: #96a;} 
+
+/*
+.exam {
+  margin:auto; margin-top:50px;
+  width:800px; height: 300px;}
+
+.exam > ul {
+  margin:auto;
+  width:100px; height:300px;
+  background-color: #ccc;}
+
+.exam li {
+  width:10px; height:10px;
+  transition-property: all;
+  transition-duration:200ms;
+}
+
+.exam:hover li:nth-child(1){
+  width:100px;
+  transition-timing-function: linear;
+  background-color: #f06;
+}
+
+.exam:hover li:nth-child(2){
+  height:290px;
+  transition-delay: 100ms;
+  transition-timing-function: linear;
+  background-color: #f06;
+}
+
+.exam:hover li:nth-child(3){
+  width:100px;
+  transition-delay: 200ms;
+  transition-timing-function: linear;
+  background-color: #f06;
+}
+
+.exam:hover li:nth-child(4){
+  height:280px;
+  transition-delay: 300ms;
+  transition-timing-function: linear;
+  background-color: #f06;
+} */
+
+
+.test {
+  width:960px; height:250px;
+  margin:auto; margin-top:5rem;
+  background-color: #ccc;
+}
+
+.test_01 {
+  position: relative; 
+  float:left;
+  width:250px; height: 250px;
+  padding: 2rem; box-sizing: border-box;
+  background-color: #0ac;
+}
+
+.test_01 a {display:block; width:100%; height: 100%; text-align: center;}
+
+.test_01 span {
+  display:block;
+  position: absolute;
+  background-color: #fa0;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+}
+
+.line_01 {width:0; height:1rem; top:0; left:0;
+          transition-delay:1500ms;}
+.line_02 {width:1rem; height:0; top:0; right:0; 
+          transition-delay:1000ms;}
+.line_03 {width:0; height:1rem; bottom:0; right:0;
+          transition-delay:500ms;}
+.line_04 {width:1rem; height:0; bottom:0; left:0;
+          transition-delay:0;}
+
+.test_01 a:hover .line_01 {transition-delay:1ms; width:100%;}
+.test_01 a:hover .line_02 {transition-delay:500ms; height:100%;}
+.test_01 a:hover .line_03 {transition-delay:1000ms; width:100%;}
+.test_01 a:hover .line_04 {transition-delay:1500ms;height:100%;}
+
+.test_01 a:before {
+  content=" "; display: block;
+  position: absolute; top:0; left:0;
+  width:100%; height:100%;
+  background-color: rgba(255, 50, 200,0.7);
+}
+
+.test_01 a {
+  background-image: url(../../img/home-icon.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color:#fff;
+}
+
+.test_01 a {transition: all 500ms ease;}
+.test_01 a:hover:before {background-color: rgba(255, 50, 200, 0);}
+.test_01 a:hover {background-size: 140% auto; font-weight: bold;}

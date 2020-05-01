@@ -1,5 +1,8 @@
 /* gradient.css */
 
+h1 {width:500px; margin:10px auto;text-align: center; 
+  background-color: #ADC7E4; color:#fff;}
+  
 .sample{
   width:800px; height:500px; margin: auto;
 }

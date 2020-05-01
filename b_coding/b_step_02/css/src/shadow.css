@@ -1,5 +1,7 @@
 /* shadow.css */
-
+h1 {width:500px; margin:10px auto;text-align: center; 
+  background-color: #ADC7E4; color:#fff;}
+  
 .sample, .sample2 {
     width:800px; height:auto; 
     margin:auto; margin-bottom: 5rem;
