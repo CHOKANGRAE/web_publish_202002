@@ -1,0 +1,147 @@
+/* jq_display_test2.css */
+
+.wrap{
+    width:800px; height:auto;
+    min-height: 500px;
+    margin:auto;
+}
+
+h1{
+    width:100%; 
+    margin-bottom: 1rem;
+    margin-top:1rem;
+}
+
+.accordian{
+    width:700px; height:450px;
+    margin:auto;
+
+}
+
+.accordian > dl{
+    width:100%; height:auto;
+    background-color: #fff;
+    border:2px solid #fff;
+    box-sizing: border-box;
+}
+
+.accordian dt {
+    width:100%; height:50px;
+    border-bottom:1px solid #75f; 
+}
+
+.accordian button{
+    width:100%; height:100%;
+    text-align: left;
+}
+
+.accordian dd{
+    display:none;
+    width:100%; height:50px;
+    padding:1rem; box-sizing: border-box;
+}
+
+/* =============================================== */
+
+.test{
+    width:700px; height:auto;
+    margin:auto;
+    margin-top:100px;
+}
+
+.test_style{
+    width:100%;  height:500px;
+    border: 2px solid #055;
+    box-sizing: border-box;
+    
+}
+
+.test_style > dl{
+    position: relative;
+    width:100%; height:100%;
+}
+
+.test_style dt {
+    float:left;
+    width:24%; height:50px;
+    margin-left:1%;
+    
+}
+
+.test_style dt.action{
+    background-color: #555;
+    color:#fff;
+}
+
+.test_style dt.action button{
+    background-color: transparent;
+    color:inherit;
+}
+
+.test_style button{
+    width:100%; height:100%;
+    background-color: #eee;
+    font-size: 0.8rem;
+}
+
+.test_style button:hover{
+    background-color: #555;
+    color:#fff;
+}
+
+.test_style dd{
+    display:none;
+    position: absolute;
+    left:0; bottom:0;
+    padding:1rem; box-sizing: border-box;
+    width:100%; height:450px;
+    background-color: #aca;
+}
+
+.test_style dd:first-of-type{display:block;}
+
+/* =========================================================== */
+
+.test2{
+    width:700px; height:300px;
+    margin:auto; margin-top:30px;
+    background-color: #ccc;
+}
+
+.campus {
+    width:100%; height:100%;
+    background-color: #fff;
+    border:2px solid #333;
+    box-sizing: border-box;
+}
+
+
+.campus > dl{
+    position: relative;
+    width:100%; height:100%;
+}
+
+.campus dt {
+    position: absolute;
+    float:left;
+    width:30%; height:50px;
+    margin-left:1%;
+    background-color: #333;
+    color:#fff;
+}
+
+.campus button{
+    width:100%; height:100%;
+    text-align: left;
+}
+
+.campus dd{
+    display:none;
+    margin-bottom:1px;
+    float:left;
+    width:30%; height:50px;
+    margin-left:1%;
+    background-color: #333;
+}
+
+
