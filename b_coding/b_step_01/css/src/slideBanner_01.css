@@ -1,0 +1,53 @@
+/* slideBanner_01.css */
+
+.slide_wrap{
+  width: 800px;height:600px;
+  position: relative;
+  margin:auto;
+  border: 1px solid #777;
+}
+
+.slide_btn{
+  position: absolute; z-index:300;
+  top:50%; left:5%;
+  width:90%; height: 0;
+}
+
+.slide_btn > button {
+  float:left; 
+  width:50px; height: 60px;
+  transform: translateY(-50%);
+  background-color: #ac8;
+  border-radius: 30px;
+}
+
+.slide_btn > .next {float:right;}
+
+.indicator{
+  position: absolute;
+  left:50%; bottom:0.5rem;
+  width:auto; height: 2rem;
+  border-radius: 1rem;
+  transform: translateX(-50%);
+  background-color: #07a;
+}
+
+.slide_banner_box{
+  width:100%; height:100%;
+}
+
+.slide_banner_wrap{
+  width:50%; height: 100%;
+  margin-left:-100%;
+  background-color: #aca;
+}
+
+.slide_banner_wrap > div {
+  float:left;
+  width:20%; height:100%;
+}
+
+.slide_ban_01 {background-color: #d1f;}
+.slide_ban_02 {background-color: #cff;}
+.slide_ban_03 {background-color: #ab3;}
+.slide_ban_04 {background-color: #af4;}
