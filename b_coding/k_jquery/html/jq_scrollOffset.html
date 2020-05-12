@@ -3,14 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximun-scale=3.0, minimum-scale=0.5">
+<link rel="stylesheet" href="../css/base/reset.css">
+<link rel="stylesheet" href="../css/base/common.css">
 
-<link rel="stylesheet" href="./fonts/stylesheet.css">
-
-<link rel="stylesheet" href="./css/base/reset.css">
-<link rel="stylesheet" href="./css/base/common.css">
-
-<link rel="stylesheet" href="./css/src/myCssFile.css">
+<link rel="stylesheet" href="../css/src/jq_scrollOffset.css">
 
 <!--[if IE]>
 <script src="./ie/html5shive/dist/html5shive.min.js"></script>
@@ -22,8 +18,70 @@
 </head>
 <body>
 <!-- layout -->
-.wrap
+  <div id="wrap">
+    <!-- #headBox ================================ -->
+    <header id="headBox">
+      <h1><a href="./main.html"> jquery </a></h1>
+      <nav id="navBox">
+        <h2>navigation</h2>
+      </nav>
+    </header>
+    <!-- //#headBox ============================= -->
+
+    <!-- #viewBox ================================ -->
+    <section id="viewBox">
+      <h2>OHMYGIRL</h2>
+      <div class="video_bg">
+        <!--<iframe src="https://www.youtube.com/embed/XLg0BO3qyeg" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+        picture-in-picture" allowfullscreen></iframe>-->
+      <video autoplay muted class="video">
+        <source src="../media/video/sing2.mp4" type="video/mp4">
+          <p> 사용하는 브라우저는 영상이 지원되지 않습니다. 
+            <a href="http://google.com/chrome"></a>를 이용하세요.</p>
+      </video>
+			</div>
+    </section>
+    
+    <div id="conBox">
+      <div class="title_bg">
+        <h2>A DREAM BY THE SEA</h2>
+      </div>
+
+      <div class="con_img_bg">
+        <div class="con_img"></div>
+      </div>
+    </div>
+			
+		</div>
+	</div>
+
+	<!-- script -->
+<script src="../js/base/jquery-3.5.1.min.js"></script>
+<script src="../js/base/jquery-ui.min.js"></script>
+	<script src="../js/src/jq_scrollOffset.js"></script>
+</body>
+</html>
+
+      </div>
+    </section>
+    <!-- //#viewBox ============================= -->
+
+    <div class="box_area">
+      <div class="box_01"></div>
+      <p> Lorem, ipsum dolor.</p>
+      <div class="box_02"></div>
+      </div>
+    </div>
+
+  </div>
+
+  
+    
+
 <!--script -->
-<script> </script>
+<script src="../js/base/jquery-3.5.1.min.js"> </script>
+<script src="../js/base/jquery-ui.min.js"></script>
+<script src="../js/src/jq_scrollOffset.js"></script>
 </body>
 </html>
