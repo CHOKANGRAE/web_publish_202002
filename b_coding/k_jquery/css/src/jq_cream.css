@@ -1,0 +1,100 @@
+/* jq_cream.css */
+
+.wrap{
+  width: 400px; height: 400px;
+  margin: auto; margin-top:50px;
+}
+
+#miniProduct{
+  position: relative;
+  width:100%; height:100%;
+  border:2px solid #333;
+}
+
+.silde_btn{
+  position: absolute; z-index: 500;
+  width:100%; height:0;
+  top:50%;
+}
+
+button{
+  float:left;
+  width:40px; height:40px;
+  transform:translateY(-50%);
+  border-radius: 20px;
+}
+
+button.next{
+  float:right;
+}
+
+/* ================================ */
+.indi_color {
+	position: absolute; bottom:-2.5rem; left:50%;
+	width: 100%; height:auto;
+	text-align: center;
+	padding:0.2rem; box-sizing: border-box;
+	transform:translateX(-50%);
+}
+
+.indi_color ul{	display:inline-block;}
+.indi_color li{ float: left; margin-right:1rem; width:1.5rem; height:1.5rem;}
+.indi_color li:last-child{ margin-right: 0;}
+.indi_color a{ display: block; width: 100%; height: 100%; border-radius:1.5rem; 
+							 background-color: #aaa;	outline:0;}
+							 
+.indi_color li.action a{background-color: #333;}
+.indi_color a:focus{
+	background-color: rgba(200,200,200,0.5);
+	box-shadow:0.1rem 0.1rem 0.1rem ease;
+}
+
+/* ================================ */
+
+.product li span {
+	display: block; position: absolute; left: 0; bottom: 0;
+	width: 100%; height:auto; padding:1rem; box-sizing: border-box;
+
+}
+
+.product_wrap{
+  width:100%; height:100%;
+  overflow: hidden;
+}
+
+.product{	width: 500%; height: 100%; background-color: #acc;}
+
+.product_wrap li > a {
+  display:block;
+  margin-top:360px;
+  text-align:center;
+  width:100%; height:40px;
+  line-height: 40px;
+  font-weight: bold;
+  background-color: #9df;
+}
+
+.product_wrap > ul {
+  width:500%; height:100%;
+  background-color: #333;
+  
+}
+
+.product_wrap li {
+  position: relative;
+  float:left;
+  width:20%; height:100%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.product_wrap li:nth-child(1) {background-image:url(../../img/berry_berry_strawberry.png);}
+.product_wrap li:nth-child(2) {background-image:url(../../img/disappear_with_the_wind.png);}
+.product_wrap li:nth-child(3) {background-image:url(../../img/mom_is_an_alien.png);}
+.product_wrap li:nth-child(4) {background-image:url(../../img/31_yogurt.png);}
+.product_wrap li:nth-child(5) {background-image:url(../../img/rainbow_sherbet.png);}
+
+
+
+
