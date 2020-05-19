@@ -16,6 +16,7 @@
 	color:#333;}/*button*/
 .indicator .next{	float:right;}/*.next*/
 /* ----------------------------------------------------- */
+/*
 .indi_color {
 	position: absolute; bottom:-2.5rem; left:50%;
 	width: 100%; height:auto;
@@ -29,13 +30,13 @@
 .indi_color li:last-child{ margin-right: 0;}
 .indi_color a{ display: block; width: 100%; height: 100%; border-radius:1.5rem; 
 							 background-color: #aaa;	outline:0;}
-							 
-.indi_color li.action a{background-color: #333;}
-.indi_color a:focus{
+							 */	 
+.indicator_color li.action a{
+	border-radius:1.5rem; background-color: #333;}
+.indicator_color a:focus{
 	background-color: rgba(200,200,200,0.5);
 	box-shadow:0.1rem 0.1rem 0.1rem ease;
 }
-
 
 /* ----------------------------------------------------- */
 

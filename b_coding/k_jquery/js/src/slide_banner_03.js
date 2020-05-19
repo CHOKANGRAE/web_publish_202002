@@ -14,11 +14,11 @@ var cloneLi   = productUl.children('li').eq(-1).clone(true);
 
 var productLi = productUl.children('li');
 var proLiLen  = productLi.length;
-//console.log(proLiLen);
+console.log(proLiLen);
 
 // productUl.width(proLiLen * 100 + '%');
- productUl.css({width:proLiLen * 100 + '%', marginLeft: -100 + '%', position: 'relative'});
- productLi.width(100 / proLiLen + '%');
+ productUl.css({width:proLiLen * 100 + '%', position: 'relative'});
+ //productLi.width(100 / proLiLen + '%');
 
  var n = 0;
  var check = true;
@@ -49,7 +49,7 @@ miniProIndiLi.on('click', function(e){
 });
 
 // -------------------------------------
-
+/*
 var prSpan = productLi.find('span');
 // 버튼 기능 합치기
 miniBtn.on('click', function(e){
@@ -68,7 +68,7 @@ miniBtn.on('click', function(e){
 	}else if(check) { // prev 버튼 클릭
 		check = false;
 		n -= 1;
-		productUl.stop().animate.fadeIn(800)({left: -n * 100 + '%'}, timed, function(){
+		productUl.stop().animate({left: -n * 100 + '%'}, timed, function(){
 			if(n <= -1){	n = proLiLen - 2;	 }
 			prSpan.animate({bottom:0});
 			productUl.css({left: -n * 100 + '%'});
@@ -78,12 +78,12 @@ miniBtn.on('click', function(e){
 	miniProIndiUl.find('li').eq(n).addClass('action');
 	miniProIndiUl.find('li').eq(n).siblings('li').removeClass('action');
 });
+*/
 
 var mvImg;
 var MvSlideGo = function(){
 	mvImg = setInterval(function(){
 		miniBtnNext.trigger('click');
-		console.log('!');
 	}, timed*5);
 };
 
@@ -96,27 +96,3 @@ var GoFn    =  function(){	MvSlideGo()};
 
  // 좌우버튼 클릭시 - indicator처리
  // setInterval 처리시 - indicator처리
-
- // fade처리 숫자바뀌는거
-
- $('.slideshow').each(function(){
-	// img요소들을 둘러싸고 있는 div요소를 취득
-	var container = $(this);
-	// 페이드 전환 1회분의 함수
-	function switchImg(){
-			// img요소를 전부 취득
-			var imgs = productLi.find('img');
-			//앞에서부터 img요소 2개를 얻는다.
-			var first = imgs.eq(0);
-			var second = imgs.eq(1);
-
-			
-			first.fadeOut(2000).appendTo(container);
-			
-			second.fadeIn(2000);
-	}
-	
-	setInterval(switchImg, timed);
-});
-
-    
