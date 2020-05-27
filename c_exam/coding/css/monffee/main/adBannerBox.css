@@ -3,3 +3,65 @@
 	width: 100%; height:100%;
 	background-color: #ca7;
 }
+
+.indicator{
+  position: absolute; z-index: 100;
+  bottom:2%; right:30%;
+  width:200px; height:30px;
+}
+
+.indicator > ul{
+  width:100%; height:100%;
+}
+
+.indicator li {
+  float:left; margin-right:10px;
+  width:30px; height:100%;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.indicator li:last-child{margin-right: 0;}
+
+.indicator li > a{display:block; width: 100%; height: 100%;}
+
+.btn{
+  position: absolute; z-index:100;
+  top:50%; left:50%; transform: translate(-50%);
+  width:90%; height:10%;
+}
+
+.btn > button {
+  width:90px; height:192px;
+  background-repeat: no-repeat;
+}
+.prevBtn{
+  float:left;
+  background-image: url(../../../img/monffee/adBanner/slide_btn.png);
+  background-position: 0 100%;
+        }
+
+.nextBtn{
+  float:right;
+  background-image: url(../../../img/monffee/adBanner/slide_btn.png);
+  background-position: 100% 100%;}
+
+.banner_area{
+  width:100%; height: 100%;
+  overflow:hidden;
+}
+
+.banner_area > ul{
+  width:500%; height:100%;
+}
+
+.banner_area li{
+  float:left;
+  width:20%; height:100%;
+}
+
+.banner_01{background-image: url(../../../img/monffee/adBanner/slide_01.png);}
+.banner_02{background-image: url(../../../img/monffee/adBanner/slide_02.png);}
+.banner_03{background-image: url(../../../img/monffee/adBanner/slide_03.png);}
+.banner_04{background-image: url(../../../img/monffee/adBanner/slide_04.png);}
+.banner_05{background-image: url(../../../img/monffee/adBanner/slide_05.png);}
