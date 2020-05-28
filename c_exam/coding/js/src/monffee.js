@@ -7,7 +7,7 @@
 	var wrap = $('#wrap');
 	wrap.height(winH);
 
-	// ---------------------------
+	// --------------------------
 	var headBox = $('#headBox');
 	headBox.wrap('<div class="headBox_wrap"></div>');
 
@@ -106,8 +106,13 @@ gnbArea.on('mouseenter', function(){
 headBox.on('mouseleave', function(){
 	gnbArea.find('dd').stop().slideUp();
 });
+
+// ------
+// BannerBox
+
+
 // -------------------------------------------------
-// news 
+// newsBox
 var newsList = [
 	{img:'menu_01.png', imgNarr:'이미지설명', title:'title_01', content:'ladsfasdforem........'},
 	{img:'menu_02.png', imgNarr:'이미지설명', title:'title_02', content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque eaque odit maxime vero ipsa repellendus magnam quam minus beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
@@ -148,6 +153,8 @@ for(; i<newsList.length; i++){
 }
 
 
+
+// -----------------------------------------
 
 
 

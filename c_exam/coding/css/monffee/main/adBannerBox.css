@@ -1,67 +1,131 @@
 /* adBannerBox.css */
+
 #adBannerBox {
+  position: relative; z-index: 0;
 	width: 100%; height:100%;
-	background-color: #ca7;
+}
+.adBanner_btn{
+  position: absolute; left:5%; top:50%;
+  width: 90%; height:0;
+  margin-top:-95px;
+
 }
 
-.indicator{
-  position: absolute; z-index: 100;
-  bottom:2%; right:30%;
-  width:200px; height:30px;
-}
-
-.indicator > ul{
-  width:100%; height:100%;
-}
-
-.indicator li {
-  float:left; margin-right:10px;
-  width:30px; height:100%;
-  border-radius: 30px;
-  background-color: #fff;
-}
-
-.indicator li:last-child{margin-right: 0;}
-
-.indicator li > a{display:block; width: 100%; height: 100%;}
-
-.btn{
-  position: absolute; z-index:100;
-  top:50%; left:50%; transform: translate(-50%);
-  width:90%; height:10%;
-}
-
-.btn > button {
-  width:90px; height:192px;
+.adBanner_btn button{
+  float:left; width: 90px; height:182px;
+  background-image: url(../../../img/monffee/adBanner/slide_btn.png);
   background-repeat: no-repeat;
+  background-position: 0 0;
 }
-.prevBtn{
-  float:left;
-  background-image: url(../../../img/monffee/adBanner/slide_btn.png);
-  background-position: 0 100%;
-        }
 
-.nextBtn{
+.adBanner_btn button.next{
   float:right;
-  background-image: url(../../../img/monffee/adBanner/slide_btn.png);
-  background-position: 100% 100%;}
-
-.banner_area{
-  width:100%; height: 100%;
-  overflow:hidden;
+  background-position: 100% 0;
 }
 
-.banner_area > ul{
-  width:500%; height:100%;
+.adBanner_btn button:hover,
+.adBanner_btn button:focus{
+  background-position-y: 105%;
 }
 
-.banner_area li{
+/*하단 인디케이터*/
+.adBanner_indicator{
+  position: absolute; 
+  right:6%; bottom:22px;
+  width: 364px; height:44px;
+}
+
+.adBanner_indicator li {
   float:left;
-  width:20%; height:100%;
+  width:40px; height: 40px;
+  margin-left: 40px;
 }
 
-.banner_01{background-image: url(../../../img/monffee/adBanner/slide_01.png);}
-.banner_02{background-image: url(../../../img/monffee/adBanner/slide_02.png);}
-.banner_03{background-image: url(../../../img/monffee/adBanner/slide_03.png);}
-.banner_04{background-image: url(../../../img/monffee/adBanner/slide_04.png);}
-.banner_05{background-image: url(../../../img/monffee/adBanner/slide_05.png);}
+
+.adBanner_indicator a{
+  display: block; width: 100%; height:100%;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.adBanner_indicator a:hover,
+.adBanner_indicator a:focus,
+.adBanner_indicator li.active a{
+  background-color: #a30;
+}
+
+/*내부 배경*/
+.adBanner_content{
+  width: 100%; height: 100%;
+}
+
+.adBanner_bg{
+  width: 50%; height:100%;
+  padding-left:15%; padding-right:1.5rem; padding-top:300px; box-sizing: border-box;
+  background-color: rgba(170, 51, 0, 0.7);
+}
+
+.adBanner_bg h3{
+  width: 100%; height: 120px; 
+  margin-bottom: 40px;
+  background-image: url(../../../img/monffee/monfee_svg_logo.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: contain;
+}
+
+.adBanner_bg ul {
+	position:relative;
+	width: 100%; height:100%;
+	color:#fff; 
+	font-size:1.2rem; line-height:1.2;
+}
+
+.adBanner_bg li{
+	position: absolute; top: 0; left: 0; z-index:0;
+	width: 100%; height:auto;
+	display: none;
+}
+
+.adBanner_bg li.active {
+	z-index: 10;
+}
+
+.adBanner_img{
+  position: absolute; top:0; left:0; z-index: -1;
+  width: 100%; height:100%; background-color: #acf;
+}
+
+.adBanner_img ul{
+  width: 500%; height: 100%;
+}
+
+.adBanner_img li{
+  width: 20%; height:100%;
+  float:left;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.adBanner_img ul li.ad_01{background-image: url(../../../img/monffee/adBanner/slide_01.png);}
+.adBanner_img ul li.ad_02{background-image: url(../../../img/monffee/adBanner/slide_02.png);}
+.adBanner_img ul li.ad_03{background-image: url(../../../img/monffee/adBanner/slide_03.png);}
+.adBanner_img ul li.ad_04{background-image: url(../../../img/monffee/adBanner/slide_04.png);}
+.adBanner_img ul li.ad_05{background-image: url(../../../img/monffee/adBanner/slide_05.png);}
+
+/*스크롤 다운 이미지 생성*/
+.scroll_down_img{
+  position: absolute; bottom:1rem; z-index:900;
+  width: 45px; height: 134px; 
+  background-image: url(../../../img/monffee/adBanner/mouse.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  margin:auto; left:0; right:0;
+  animation:mvScroll 2s infinite ease alternate;
+}
+
+@keyframes mvScroll {
+  0%{background-position-y: 0;}
+  100%{background-position-y: -3rem;}
+}
