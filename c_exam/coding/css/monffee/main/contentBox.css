@@ -61,42 +61,60 @@
 	background-position-y:100%;
 }
 
+
 .material_area {
 	width: 55%; min-width:73.2421875%;
 	height:100%; 
 	margin:auto;
-	background-color: #777;
-	/* overflow: hidden; */
+	/*overflow: hidden;*/
 }
 .material_area ul{
-	width:150%; height:100%;
+	width:120%; height:100%;
 }
 
 .material_area li{
 	float:left;
 	width: 10vw; height: 120px;
 	margin-left:5vw;
-	background-color: #caa;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 .material_area li:first-child{
 	margin-left:1vw;
 }
 
-
-
-
 .material_area a{
+	/* background-image: url('../../../img/monfee/material/material_icon.png'); */
+	position: relative;
+	background-repeat: no-repeat;
+	/* overflow: hidden;*/
+}
+.material_area a:hover{filter:drop-shadow(0.2rem 0.2rem 0.5rem #171717);}
+.material_area a:focus,{ background-color: #565656; }
+
+.material_area a>div{
+	position: absolute; left: 50%; top: 50%;
+	width: 1100px; height: 618px;
+}
+
+.mat_img{display:block;
+	position: relative; top: 0; left: 0;
+	width: 1100px; height: 680px;
 	background-image: url('../../../img/monffee/material/material_icon.png');
 	background-repeat: no-repeat;
 }
 
-.mat_01 a{background-position:1% 0;}
-.mat_02 a{background-position:25% 0;}
-.mat_03 a{background-position:50% 0;}
-.mat_04 a{background-position:73% 0;}
-.mat_05 a{background-position:100% 0;}
-.mat_06 a{background-position:1% 23%;}
-.mat_07 a{background-position:24% 23%;}
-.mat_08 a{background-position:50% 23%;}
-.mat_09 a{background-position:73% 23%;}
-.mat_10 a{background-position:100% 23%;}
+.mat_01 .mat_img{ left: calc(70 / 1100 * -100%); top:calc(70 / 680 * -100%);}
+.mat_02 .mat_img{ left: calc(310 / 1100 * -100%); top:calc(70 / 680 * -100%);}
+.mat_03 .mat_img{ left: calc(550 / 1100 * -100%); top:calc(70 / 680 * -100%);}
+.mat_04 .mat_img{ left: calc(790 / 1100 * -100%); top:calc(70 / 680 * -100%);}
+.mat_05 .mat_img{ left: calc(1030 / 1100 * -100%); top:calc(70 / 680 * -100%);}
+
+.mat_06 .mat_img{ left: calc(70 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+.mat_07 .mat_img{ left: calc(310 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+.mat_08 .mat_img{ left: calc(550 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+.mat_09 .mat_img{ left: calc(790 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+.mat_10 .mat_img{ left: calc(1030 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+
+.mat_11 .mat_img{ left: calc(70 / 1100 * -100%); top:calc(370 / 680 * -100%);}
+.mat_12 .mat_img{ left: calc(310 / 1100 * -100%); top:calc(370 / 680 * -100%);}
