@@ -101,11 +101,12 @@
         backgroundSize:'cover', backgroundPosition:'50% 50%',
         backgroundRepeat:'no-repeat'
       });
-
+    });
     bigModalBtn.on('click',function(e){
       e.preventDefault();
       bigModal.fadeOut(400);
     })
 
-	
+  
+    
 })(jQuery);

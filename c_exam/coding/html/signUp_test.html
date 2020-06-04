@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximun-scale=3.0, minimum-scale=0.5">
+
+<link rel="stylesheet" href="../css/base/reset.css">
+<link rel="stylesheet" href="../css/base/common.css">
+<link rel="stylesheet" href="../css/login/singUp_test.css">
+
+
+<!--[if IE]>
+<script src="./ie/html5shive/dist/html5shive.min.js"></script>
+<script src="./ie/pie/PIE.js"></script>
+<script src="./ie/respond/dist/respond.min.js"></script>
+<![endif]-->
+
+<title> title내용</title>
+</head>
+<body>
+<!-- layout -->
+<div id="wrap">
+  <h1><a href="#"><span>NAVER</span></a></h1>
+  <form action="#" method="POST">
+    <fieldset class="idpw">
+      <legend class="hidden">아이디 및 비밀번호</legend>
+      <ul>
+        <label for="id"><span>아이디</span></label>
+        <li>
+          <span class="idBox">
+            <input type="text" id="id" name="user_id" value=""><span>@naver.com</span>
+          </span>
+        </li>
+
+        <label for="pw"><span>비밀번호</span></label>
+        <li><span class="idBox"><input type="password" id="pw" name="user_password" value="" ></span></li>
+
+        <label for="repw"><span>비밀번호 확인</span></label>
+        <li><span class="idBox"><input type="password" id="repw" name="user_re_password" value=""></span></li>
+      </ul>
+      
+    </fieldset>
+    <fieldset class="user_info">
+      <legend class="hidden">사용자 정보 및 체크</legend>
+      <ul>
+        <label for="name"><span>이름</span></label>
+        <li><span class="idBox"><input type="text" id="name" name="user_name" value=""></span></li>
+        
+        <label for="birth"><span>생년월일</span></label>
+        <li>
+          <span class="birth_box">
+            <input type="text" id="birth_year birth_box" name="user_birth_year" value="" placeholder="년(4자)" required="required">
+          </span>
+          <span class="birth_box">
+            <select id="birth_month birth_box" name=""></select>
+          </span>
+          <span class="birth_box">
+            
+            <input type="text" id="birth_day birth_box" name="user_birth_day" value="" placeholder="일" required="required">
+          </span>
+        </li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="send">
+        <input type="submit" name="sendBtn" vlaue="log in">
+      </div>
+    </fieldset>
+  </form>
+</div>
+<!--script -->
+<script src="../js/base/jquery-3.5.1.min.js"> </script>
+<script src="../js/base/jquery-ui.min.js"></script>
+</body>
+</html>
