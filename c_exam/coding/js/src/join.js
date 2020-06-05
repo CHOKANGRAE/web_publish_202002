@@ -18,6 +18,8 @@
   ];
   var contryText = '<option value=""></option>';
 
+  contry.sort();
+
   // 기능 설정 ---------------------------
   var i = 0;
   var valueResult;

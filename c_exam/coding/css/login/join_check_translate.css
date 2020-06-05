@@ -1,0 +1,133 @@
+/* join_check.html */
+
+#wrap {
+  width: 100%; height:auto; min-height:100%;
+  padding:5rem; box-sizing: border-box;
+  background-color: #f5f6f7;
+}
+h1{
+  text-align: center; margin-bottom:56px;
+}
+
+#formBox{
+  width: 460px; height:auto;
+  margin:auto;
+}
+
+fieldset{
+  width: 100%; height:auto; 
+  margin-bottom:25px;
+}	
+
+input[type="checkbox"] {
+  position: absolute; z-index: -1; top: 0; left: 0; overflow: hidden;
+}
+
+.check_area {
+  width: 100%; height:auto; min-height: 28px;
+  font-size: 1rem; color:#333; font-weight: bold;
+  word-break:keep-all;
+}
+
+.check_area label{
+  position: relative;
+  display:block;
+  width: 100%; height:auto; min-height: 28px;
+  padding-left:1.875rem;
+  box-sizing: border-box;
+}
+
+
+.check_area label:before{
+  content:"\f058"; 
+  position: absolute;	top:-1px; left: 0; 
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;	font-size:1.5rem;
+  color:rgba(51,51,51,0.3);
+} 
+
+.all_check label:before{
+  top:0.5rem;
+  font-size:1.5rem;}
+
+input[type="checkbox"].check + 
+.check_area > label:before{ color:#f07;}
+
+.all_check label{
+  display: block;
+  padding-left:2rem;
+  text-decoration: underline;
+  cursor: pointer;
+  line-height: 1.5rem;
+}
+
+
+/*
+.require_check .check_area > label:after {content:"(필수)"; font-size:0.8rem; color:#070;}
+.option_check .check_area > label:after {content:"(선택)"; font-size:0.8rem; color:#777;}
+*/
+
+.require_check .check_area strong{font-weight:normal; font-size:0.8rem; color:#8b00ff;}
+.option_check .check_area strong{font-weight:normal; font-size:0.8rem; color:#777;}
+
+/* ========================================= */
+
+.terms{
+  width:100%; height:90px;
+  padding:12px; box-sizing: border-box;
+  border:1px solid #dadada;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-bottom: 26px;
+  overflow-x:hidden;
+  overflow:auto;
+}
+
+.title{
+  color:#8b00ff;
+  font-weight: bold;
+}
+
+.terms p{
+  font-size:0.9rem;
+}
+
+.terms dt{
+  font-weight: bold;
+  font-size:0.9rem;
+  border-bottom:1px solid #ccc;
+}
+
+.terms dd{
+  font-size: 0.875rem;
+}
+
+.terms ol{
+  font-weight: bold;
+  font-size:0.9rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.terms li{
+  font-weight:normal;
+  font-size:0.875rem;
+  border-bottom: none;
+}
+
+.send_cancle button{
+  margin-top:29px;
+  width:225px; height:62px;
+  border:0; color:#fff;
+  font-size:1.5rem;
+  font-weight: bold;
+}
+
+#cancel{float:left; background-color: #777;}
+#agree{float:right; background-color: #eaafc8;}
+
+.send_cancle > span{
+  display:inline-block;
+  margin-top:20px;
+  width:100%; height:20px;
+  text-align: center; font-weight: 0.5rem;
+}
