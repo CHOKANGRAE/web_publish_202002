@@ -1,0 +1,75 @@
+/* intro_01.css */
+
+#wrap{
+  width: 100%; height: 20000px;
+  margin:auto;
+  background-image: linear-gradient(180deg, #7F7FD5,#86A8E7,#12c2e9, #c471ed, #f64f59);
+}
+
+.move_mouse{
+  position: relative; z-index: 0;
+  width: 100%; height: auto;
+  min-height: 800px; background-color: #ddd;
+}
+
+.move_mouse > p{
+  width: 100%; text-align: center;
+  padding-top:1rem; font-size: 1.2rem;
+  color:#777;
+}
+
+.move_image{
+  position: fixed;
+  width: 100%; height: 100%;
+  top:0; left:0; z-index:-10;
+  background-color: #8b00ff;
+  overflow: hidden;
+}
+
+.move_image img{
+  position: absolute; top:50%; left:0;
+  display: none;
+  width: 100%; height: auto;
+  transform: translateY(-50%);
+}
+
+.move_image img:nth-of-type(1){display: inline-block;}
+
+
+/* =============================================== */
+
+.page_move_icon{
+  position: fixed; z-index:10;
+  top:0; left:0;
+  width: 100%; height: 100%;
+  animation: pageMv 2s infinite alternate ease-in-out;
+}
+
+.page_move_icon i{
+  display:block; position: absolute;
+  width: 80px; height: 80px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.page_move_icon .icon_01 { top:5%; left:2%;       animation:icon 10s infinite linear; background-image: url(../../img/video/icon-01.svg);}
+.page_move_icon .icon_02 { top:80%; left:70%;     animation:icon 5s infinite linear; background-image: url(../../img/video/icon-03.svg);}
+.page_move_icon .icon_03 { top:90%; left:10%;     animation:icon 8s infinite linear; background-image: url(../../img/video/icon-02.svg);}
+.page_move_icon .icon_04 { top:2%; right:5%;      animation:icon 6s infinite linear; background-image: url(../../img/video/icon-05.svg);}
+.page_move_icon .icon_05 { bottom:10%; left:50%;  animation:icon 2s infinite linear; background-image: url(../../img/video/icon-04.svg);}
+.page_move_icon .icon_06 { bottom:30%; right:15%; animation:icon 3s infinite linear; background-image: url(../../img/video/icon-06.svg);}
+.page_move_icon .icon_07 { bottom:60%; right:20%; animation:icon 7s infinite linear; background-image: url(../../img/video/icon-01.svg);}
+.page_move_icon .icon_08 { bottom:40%; right:10%; animation:icon 9s infinite linear; background-image: url(../../img/video/icon-02.svg);}
+.page_move_icon .icon_09 { bottom:20%; right:-1%; animation:icon 10s infinite linear; background-image: url(../../img/video/icon-05.svg);}
+
+
+@keyframes pageMv{
+  0% {transform: translateY(0);}
+  100% {transform: translateY(5rem);}
+}
+
+@keyframes icon{
+  0% {transform: rotate(0);}
+  100% {transform: rotate(320deg);}
+}

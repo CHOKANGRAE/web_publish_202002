@@ -1,0 +1,152 @@
+/* slide_banner_04.css */
+
+:root{
+  --base-color:#17aaff;
+}
+
+body {font-family: 'NanumSquare';}
+
+#wrap{
+  width: 90%; min-width: 900px; min-width: 1600px;
+  height:auto; margin:auto;
+  background-color: #ccc;
+}
+
+h1{
+  padding:1rem;
+  text-align: center;
+  background-color: #555;
+  color:#fff;
+}
+
+.viewBox{
+  width: 100%; height:auto;
+}
+
+.slide_banner{
+  position: relative; z-index:100;
+  width: 100%; height:800px;
+  background-color: #ccc;
+}
+
+.slide_banner:after{
+  content:" "; display:block;
+  position: absolute; top:0; left:0;
+  width:100%; height:100%;
+  z-index:300;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* ------------------------------ */
+
+.btn{
+  position: absolute; top:50%; left:50%; z-index:1000;
+  transform:translateX(-50%);
+  width:60%; height:0;
+}
+
+.next{float:right; font-size:4rem; transform:translateY(-50%); color:#fff;}
+.prev{float:left; font-size:4rem; transform:translateY(-50%); color:#fff;}
+
+/* ------------------------------ */
+
+.slide_banner > ul{
+  position: absolute; top:50%; left:50%; z-index:500;
+  transform:translateX(-50%);
+  width:55%; height:10px;
+  perspective: 50rem; /* 기준치를 주고 자식들을 rotate */
+}
+
+.slide_banner li{
+  position:absolute; z-index:100;
+  top:0; bottom:0; left:0; right:0; margin:auto;
+  width:40%; height:600px;
+  padding-top: 250px; box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.slide_banner li:first-child{
+  z-index:-1;
+  transform:translateX(-100%) rotateY(45deg) scale(0.8);
+}
+
+.slide_banner li:last-child{
+  z-index:-1;
+  transform:translateX(100%) rotateY(-45deg) scale(0.8);
+}
+
+.banner_01{background-image: url(../../img/bg/moon.jpg);}
+.banner_02{background-image: url(../../img/bg/winter.jpg);}
+.banner_03{background-image: url(../../img/bg/sea.jpg);}
+
+.slide_banner li p{
+  opacity: 0;
+  position: absolute; top:50%; left:-2rem;
+  width:200%; height:auto;
+  font-size:4rem; font-weight: bold;
+  color:#fff;
+  transition:all 500ms ease;
+}
+
+.slide_banner li.active p {opacity: 1;}
+
+.slide_banner li .con_01{
+  text-transform: uppercase;
+
+}
+
+.slide_banner li .con_02{
+  position: relative; left:50px;
+  text-transform: uppercase;
+  font-size:3rem;
+  margin-bottom: 2rem;
+}
+
+.slide_banner li .con_02:before{
+  content:" "; position: absolute;
+  top:50%; left:-50px;
+  width:40px; height:0.5rem; background-color: #fff;
+}
+.slide_banner li .con_02:after{
+  content:" "; position: absolute;
+  left:-50px; bottom:-0.5rem; width:80px; height:0.2rem;
+  background-color: #eee;
+}
+
+.slide_banner li .con_03{
+  font-size:1.2rem;
+}
+
+.slide_banner li span{
+  display:block; width:100%; height:auto;
+  text-shadow:0.1rem 0.2rem 0.5rem #333;
+  transform:translateY(1.5rem);
+  transition:all 600ms ease;
+}
+
+.slide_banner li.active span{
+  transform:translateY(0);
+}
+
+  .slide_banner li.active .con_01{transition-delay:0;}
+  .slide_banner li.active .con_02{transition-delay:100ms;}
+  .slide_banner li.active .con_03{transition-delay:200ms;}
+
+.slide_banner li.up span{
+  transform:translateY(-3rem);
+  transition: all 500ms ease-out;
+}
+
+/* ------------------------------ */
+
+.back_img{
+  width:100%; height:100%;
+  background-color: #fff;
+  /*
+  background-image: url(../../img/bg/winter.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  */
+}

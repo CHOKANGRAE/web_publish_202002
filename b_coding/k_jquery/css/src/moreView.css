@@ -1,0 +1,74 @@
+/* moreView.css */
+
+#wrap{
+  width:90%; height:auto;
+  margin:auto;
+  border: 1px solid #333;
+  border-top: 0;
+  border-bottom : 0;
+}
+
+h1{
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+h2{
+  padding:1rem;
+  background-color: #acc;
+  text-align: center;
+}
+
+.people{
+  width:100%; height:auto;
+  margin:auto;
+  padding:1rem; box-sizing: border-box;
+  border: 1px solid #999;
+  border-top:0;
+  border-bottom: 0;
+ }
+
+.content{
+  width:95%; height:auto;
+  margin:auto; margin-bottom: 5rem;
+
+}
+
+.content > div{
+  width:100%; height:auto;
+  padding:1rem; box-sizing: border-box;
+  background-color: #cdf;
+  margin-bottom: 2rem;
+}
+
+.content > div:after{
+  content: " "; display: block; clear: both;
+}
+
+.img{
+  float:left; width:150px; height:150px;
+  margin-right: 3rem;
+  border-radius: 100%; background-color: #fff;
+  overflow: hidden;
+}
+
+.img img{
+  width: auto; height: auto; min-width:120%; min-height: 120%;
+}
+
+.content dl{
+  float:left; width:auto; height:auto;
+  border-left: 3px solid #07a;
+  padding-left: 1.5rem;
+}
+
+.content dt{font-weight: bold; color:#333;}
+.content dd{font-weight: normal; color:#777; margin-bottom: 0.5rem;}
+
+.more{
+  width:100%; height:auto;
+  text-align: center;
+}
+
+.more button{
+  width:100%; height:50px; background-color: #eee;
+}
